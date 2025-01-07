@@ -46,20 +46,47 @@ for (let i = 1; i <= 3; i++) {
 // let number2 = parseInt(value2);
 // prompt is string convert to number
 
-function addTwoNumbers (value1 , value2){
-    let sum = value1 + value2;
-    return sum; 
-}
+// function addTwoNumbers (value1 , value2){
+//     let sum = value1 + value2;
+//     return sum; 
+// }
 
-let value1 = Number(prompt("Enter the first number"))
-let value2 = Number(prompt("Enter the second number"));
-let result = addTwoNumbers(value1 , value2);
-document.getElementById("demo1").innerHTML = result
+// let value1 = Number(prompt("Enter the first number"))
+// let value2 = Number(prompt("Enter the second number"));
+// let result = addTwoNumbers(value1 , value2);
+// document.getElementById("demo1").innerHTML = result
 
 
 function userLoggedIn(userName){
+    if(!userName){
+        // console.log("Please enter your name");
+        
+        return "Please enter your name";
+    }
     return `Welcome ${userName} ! You are logged in successfully`;
 }
 
 let userName = prompt("Enter your name");
-document.getElementById("demo").innerHTML = userLoggedIn(userName);
+let result = userLoggedIn(userName);
+console.log(result);
+
+
+
+
+
+
+function sumNumber(num1, num2){
+    let sum = num1 + num2;
+    return sum;
+}
+
+let num1 = Number(prompt("Enter the first number"));
+let num2 = Number(prompt("Enter the second number"));
+let finalResult = sumNumber(num1 , num2);
+document.getElementById("demo1").innerHTML = finalResult
+
+if(finalResult > 10){
+    document.getElementById("demo").innerHTML = "Greater than 10";
+}else{
+    document.getElementById("demo").innerHTML = "Less than 10";
+}
