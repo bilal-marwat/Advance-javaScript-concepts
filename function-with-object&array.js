@@ -21,7 +21,7 @@ const userName = {
     country : "Pakistan"
 }
 
-function userInfo(user){
+function userInfo(user){ // inside function values pass is called parameter
     console.log(`Name : ${user.name} , Age : ${user.age} , City : ${user.city} , Country : ${user.country}`);
     
 }
