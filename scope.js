@@ -152,3 +152,20 @@ varInFunctionScope()
 }
 
 console.log(`i am var varibale inside block scope i am accessing variable outside block scope ${strrr}`);
+
+
+// Block Scope Example:
+{
+    let blockVar = "I am block scoped";  // Block scope variable
+    const blockConst = "I am also block scoped"; // Block scope constant
+    console.log(blockVar);  // This will work
+    console.log(blockConst);  // This will also work
+  }
+  
+  console.log(blockVar);  // Error! 'blockVar' is not accessible outside the block
+  console.log(blockConst);  // Error! 'blockConst' is not accessible outside the block
+  
+
+//   Important Points:
+// let aur const block scope ko follow karte hain.
+// var block scope ko follow nahi karta; ye function scope me hota hai.
