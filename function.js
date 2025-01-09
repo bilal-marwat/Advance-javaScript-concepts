@@ -90,3 +90,10 @@ if(finalResult > 10){
 }else{
     document.getElementById("demo").innerHTML = "Less than 10";
 }
+
+
+// anonymous function 
+const noNameFunc = function(){
+    console.log("This is an anonymous function");
+}
+noNameFunc();
