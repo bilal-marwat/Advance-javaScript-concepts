@@ -25,25 +25,39 @@ person.greet();
 console.log(this);
 
 
-function greet() {
-    let userName = "Muhammad Bilal";
-    console.log(this.userName);
+function greet() { 
+    //Aapke code me undefined aane ka reason ye hai ki this.userName global scope me userName ko dhoondh raha hai, lekin aapne userName ko function ke andar let keyword ke saath define kiya hai. Is wajah se userName ek local variable hai aur this usko access nahi kar sakta kyunki this global context ko refer kar raha hai.
+    // let userName = "Muhammad Bilal";
+  console.log(this);
+
+    //Breakdown:
+    //Function Context: Jab aap this.userName likhte hain, to this global object ko refer kar raha hota hai. Global object me userName nahi hai, isliye undefined return hota hai.
+    
+    //Local Variable: Aapne userName ko let keyword ke sath define kiya hai, jo sirf function ke andar accessible hai, aur this usse directly refer nahi kar sakta.
 }
 greet();
 
 
+
+
+function strcitMode(){
+    "use strict";
+    console.log(this);
+}
+
+strcitMode();
+
 //function expression
 
-const greetExp = function () {
-    let userName = "Muhammad Bilal";
-    console.log(this.userName);
-}
-greetExp();
+// const greetExp = function () {
+//     console.log(this);
+// }
+// greetExp();
 
 
-//arrow function
-const greetArrow = () => {
-    let userName = "Muhammad Bilal";
-    console.log(this.userName);
-}
-greetArrow();
+// //arrow function
+// const greetArrow = () => {
+//     let userName = "Muhammad Bilal";
+//     console.log(this.userName);
+// }
+// greetArrow();
